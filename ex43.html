@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício</title>
+</head>
+<body>
+    <h1>Exercício 43</h1>
+    <p>Crie uma aplicação para calcular o volume e a área de uma esfera (figura meramente
+        ilustrativa).
+        <br>Área = 4 * PI * r2
+        <br>Volume = (4 * pi * r3
+        ) / 3</p>
+        
+        <label for="raio">Digite o valor do raio da esfera:</label>
+        <input type="number" id="raio"><br>
+      
+        <button onclick="calcular()">Calcular</button>
+      
+
+        <div id="resultadoArea"></div>
+        <div id="resultadoVolume"></div>
+  <script>
+    
+    function calcular() {
+
+  let raio = parseFloat(document.getElementById("raio").value);
+
+  let area = 4 * Math.PI * Math.pow(raio, 2);
+
+  let volume = (4 * Math.PI * Math.pow(raio, 3)) / 3;
+
+  document.getElementById("resultadoArea").innerHTML = `A área da esfera é: ${area.toFixed(2)}`;
+  document.getElementById("resultadoVolume").innerHTML = `O volume da esfera é: ${volume.toFixed(2)}`;
+}
+
+  </script>
+</body>
+</html>

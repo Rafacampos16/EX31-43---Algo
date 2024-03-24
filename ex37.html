@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício</title>
+</head>
+<body>
+    <h1>Exercício 37</h1>
+    <p>Crie uma aplicação que receba o raio de uma circunferência e calcule a área e o perímetro
+        do círculo correspondente.
+       <br> A fórmula para se calcular a área da circunferência é : A = π ∗ raio2
+        <br>A fórmula para se calcular o perímetro da circunferência é : 𝑃 = 2 ∗ π ∗ r</p>
+        
+        <label for="raio">Digite o raio da circunferência:</label>
+        <input type="number" id="raio">
+      
+        <button onclick="calcular()">Calcular</button>
+      
+
+        <div id="resultadoArea"></div>
+        <div id="resultadoPerimetro"></div>
+
+  <script>
+ function calcular() {
+
+  let raio = parseFloat(document.getElementById("raio").value);
+
+
+  let area = Math.PI * Math.pow(raio, 2);
+
+
+  let perimetro = 2 * Math.PI * raio;
+
+
+  document.getElementById("resultadoArea").innerHTML = `A área da circunferência é: ${area.toFixed(2)}`;
+  document.getElementById("resultadoPerimetro").innerHTML = `O perímetro da circunferência é: ${perimetro.toFixed(2)}`;
+}
+
+  </script>
+</body>
+</html>

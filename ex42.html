@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício</title>
+</head>
+<body>
+    <h1>Exercício 42</h1>
+    <p>Crie uma aplicação que possa calcular o volume de um cilindro (figura meramente
+      ilustrativa).
+     <br> Área da base = área da circunferência
+      <br> Volume = área da base x altura </p>
+        
+      <label for="raioBase">Digite o valor do raio da base:</label>
+      <input type="number" id="raioBase"><br>
+    
+      <label for="alturaCilindro">Digite o valor da altura do cilindro:</label>
+      <input type="number" id="alturaCilindro"><br>
+    
+      <button onclick="calcularVolume()">Calcular</button>
+    
+
+      <div id="resultadoVolume"></div>
+  <script>
+    function calcularVolume() {
+
+  let raioBase = parseFloat(document.getElementById("raioBase").value);
+  let alturaCilindro = parseFloat(document.getElementById("alturaCilindro").value);
+
+  let areaBase = Math.PI * Math.pow(raioBase, 2);
+
+  let volume = areaBase * alturaCilindro;
+
+  document.getElementById("resultadoVolume").innerHTML = `O volume do cilindro é: ${volume.toFixed(2)}`;
+}
+
+  </script>
+</body>
+</html>

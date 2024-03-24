@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício</title>
+</head>
+<body>
+    <h1>Exercício 39</h1>
+    <p>Crie uma aplicação para calcular a área de um trapézio qualquer (figura meramente
+        ilustrativa).
+      <br>  Área = ( (b + B) * h ) / 2</p>
+        
+      <label for="baseMenor">Digite o valor da base menor (b):</label>
+      <input type="number" id="baseMenor" step="0.5" min="0" max="10"><br>
+    
+      <label for="baseMaior">Digite o valor da base maior (B):</label>
+      <input type="number" id="baseMaior" step="0.5" min="0" max="10"><br>
+    
+      <label for="altura">Digite o valor da altura (h):</label>
+      <input type="number" id="altura" step="0.5" min="0" max="10"><br>
+    
+      <button id="btn">Calcular</button>
+
+      <div id="resultado"></div>
+
+  <script>
+    let div = document.querySelector('#resultado')
+    let btn = document.getElementById('btn')
+    let baseMenor = document.querySelector ('#baseMenor')
+    let baseMaior = document.querySelector ('#baseMaior')
+    let altura = document.querySelector ('#altura')
+
+    function calcular(){
+     let area = ((parseFloat(baseMenor.value)+ parseFloat(baseMaior.value)) * parseFloat(altura.value)) /2
+     div.innerHTML = `<strong>AREA: </strong> ${area}`
+     limpar()
+    }
+
+    function limpar(){
+      document.querySelector ('#baseMenor').value
+      document.querySelector ('#baseMaior').value
+      document.querySelector ('#altura').value
+    }
+    
+    btn.addEventListener('click', calcular)
+  </script>
+</body>
+</html>
